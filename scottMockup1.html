@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="h-100">
+    <head>
+        <title>Mockup</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        >
+        <style type="text/css">
+
+            .no-bullets {
+                list-style: none;
+            }
+            .scroll-y {
+                overflow-y: scroll;
+            }
+            .h-100-minus-tabs {
+                height: calc(100% - 43px);
+            }
+            .h-100-minus-navbar {
+                height: calc(100% - 56px);
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
+    </head>
+    <body class="h-100">
+        <div class="navbar navbar-dark bg-dark">
+            <div class="navbar-brand">MedDBriefer</div>
+            <div class="nav-item">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#scen_info">
+                    Scenario Info
+                </button>
+            </div>
+        </div>
+        <div class="container-fluid h-100-minus-navbar">
+            <div class="row h-100">
+                <div class="col-md-5 col-lg-4 scroll-y">
+                    <ul class="h3 no-bullets">
+                        <li>BSI</li>
+                        <li>Scene Size-up
+                        </li>
+                        <li>Initial Assessment/Resusitation
+                            <ul class="h4 no-bullets">
+                                <li>Airway</li>
+                                <li>Breathing</li>
+                                <li class="bg-primary text-white">Circulation</li>
+                                <li>Transport Descisions</li>
+                            </ul>
+                        </li>
+                        <li>History Taking</li>
+                        <li>Secondary Assessment
+                            <ul class="h4 no-bullets">
+                                <li>Head</li>
+                                <li>Neck</li>
+                                <li>Chest</li>
+                                <li>Abdomen/Pelvis</li>
+                                <li>Lower Extremities</li>
+                                <li>Higher Extremities</li>
+                                <li>Posterior thorax, lumbar, and Buttocks</li>
+                            </ul>
+                        </li>
+                        <li>Critical Criteria</li>
+                    </ul>
+                </div>
+                <div class="col-md-7 col-lg-8">
+                    <div class="row h-100" >
+                        <div class="col-md-12 h-50">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a href="#vitals" class="nav-link active" data-toggle="tab">Vitals</a>
+                                </li>
+                                <li>
+                                    <a href="#call_outs" class="nav-link" data-toggle="tab">Call outs</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content h-100-minus-tabs scroll-y">
+                                <div class="tab-pane container active" id="vitals">
+                                    <p>
+                                        Vitals <b>relevant</b> to section selected on left.
+                                    </p>
+                                    <p>
+                                        Unlike the other tabs on the right-hand-side, this data will be common between <b>multiple</b> steps
+                                    </p>
+                                    <p>
+                                        displaying this info as a separate pane, as it might be useful to have it displayed when working with tabs in bottom pane
+                                    </p>
+                                </div>
+                                <div class="tab-pane container" id="call_outs">
+                                    <p>
+                                        Call outs <b>specific</b> to step selected on left
+                                    </p>
+                                    <p>
+                                        displaying this info as a separate pane, as it might be useful to have it displayed when working with tabs in bottom
+                                        pane
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 h-50" >
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a href="#assessments" class="nav-link active" data-toggle="tab">Assessments</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#interventions" class="nav-link" data-toggle="tab">Interventions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#critical_criteria" class="nav-link" data-toggle="tab">Critical Criteria</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content h-100-minus-tabs scroll-y">
+                                <div class="tab-pane active container" id="assessments">
+                                    Assessment checkboxes <b>specific</b> to section selected on left
+                                </div>
+                                <div class="tab-pane container" id="interventions">
+                                    Interventions <b>specific</b> to section selected on left
+                                </div>
+                                <div class="tab-pane container" id="critical_criteria">
+                                    Critical criteria <b>specific</b> to section selected on left
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="scen_info" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Scenario Info</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Scenario Info</h3>
+                        <p>
+                            blah blah blah...
+                        </p>
+                        <h3>Dispatch Info</h3>
+                        <p>
+                            Blah blah blah..
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
